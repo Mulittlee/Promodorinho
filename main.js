@@ -12,13 +12,13 @@ var mode = true
 var time_free = 0
 var timer_on = 0
 var timeout 
+
     window.sessionStorage.setItem('min', conterMin)
     window.sessionStorage.setItem('seg', conterSeg)
     conterMin = sessionStorage.getItem('min')
     conterSeg = sessionStorage.getItem('seg')
 
 const audio = new Audio("audio.mp3");
-    console.log(conterMin)
     if (conterMin <= 9 && conterSeg <= 9) {
         $timer.innerHTML =  "0"+conterMin+":0"+conterSeg
     }else if (conterMin <= 9) {

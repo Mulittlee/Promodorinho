@@ -5,6 +5,7 @@ const $timeType = document.getElementById("time-type")
 const $btnPause = document.getElementsByClassName("btn-pause")[0]
 const $btnDarkMode = document.getElementById("btn-darkMode")
 
+$timer.innerHTML = "24:60"
 var conterSeg = 60
 var conterMin = 24
 var mode = true

@@ -5,18 +5,20 @@ const $timeType = document.getElementById("time-type")
 const $btnPause = document.getElementsByClassName("btn-pause")[0]
 const $btnDarkMode = document.getElementById("btn-darkMode")
 
-$timer.innerHTML = "24:60"
+
 var conterSeg = 60
 var conterMin = 24
 var mode = true
 var time_free = 0
 var timer_on = 0
 var timeout 
+    window.sessionStorage.setItem('min', conterMin)
+    window.sessionStorage.setItem('seg', conterSeg)
     conterMin = sessionStorage.getItem('min')
     conterSeg = sessionStorage.getItem('seg')
 
 const audio = new Audio("audio.mp3");
-    
+    console.log(conterMin)
     if (conterMin <= 9 && conterSeg <= 9) {
         $timer.innerHTML =  "0"+conterMin+":0"+conterSeg
     }else if (conterMin <= 9) {

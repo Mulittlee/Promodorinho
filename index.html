@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodorinho</title>
+</head>
+<body>
+    <header>
+        <div>
+            <input type="checkbox" id="btn-darkMode" name="btn-darkMode" style="visibility: hidden"></input>
+            <label for="btn-darkMode" class="btn-darkMode-label"></label>
+            <p>Dark</p>
+        </div> 
+        <div>
+            <h1>Pomodorinho</h1>
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <button class="btn-start" onclick="startTime()">start</button>
+        </div>
+        <div class="mid">
+            <h1 id="timer">15:60</h1>
+            <span id="time-type">Start timer</span>
+        </div>
+        <div class="bot">
+            <button class="btn-pause" onclick="pauseTime()">pause</button>          
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+:root{
+    --color-btn: rgb(234, 214, 225);
+    --color-background: rgb(255, 255, 255);
+    --color-main:rgb(240, 248, 255);
+    --color-fonts: rgb(0, 0, 0);
+    --color-shadown: rgba(138, 159, 177, 0.349);
+
+    --color-background-dark: rgb(52, 46, 66);
+    --color-btn-dark: rgb(90, 65, 77);
+    --color-main-dark:rgba(76, 108, 128, 0.383);
+    --color-fonts-dark: rgb(222, 222, 222);
+    --color-shadown-dark: rgba(0, 0, 0, 0.454);
+}
+
+
+body{
+    transition: all 0.5s;
+    color: var(--color-fonts);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-background);
+}
+body.dark{
+    background-color: var(--color-background-dark);
+    color: var(--color-fonts-dark);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 99vw;
+    height: 8vh;
+    flex-direction: row;
+}
+main{
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    height: 50vh;
+    width: 40vw;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px var(--color-shadown);
+    background-color: var(--color-main);
+}
+
+
+.mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main.dark{
+    box-shadow: 10px 10px 10px var(--color-shadown-dark);
+    background-color: var(--color-main-dark);
+}
+.btn-start,
+.btn-pause{
+    color: var(--color-fonts);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: var(--color-btn);
+    border: none;
+    box-shadow: 10px 10px 10px var(--color-shadown);
+    transition: all 0.4s;
+    font-family: 'Signika Negative', sans-serif;
+}
+.btn-start.dark,
+.btn-pause.dark{
+    box-shadow: 10px 10px 10px var(--color-shadown-dark);
+    background-color: var(--color-btn-dark);
+    color: var(--color-fonts-dark);
+}
+
+
+.btn-pause:active,
+.btn-start:active{
+    transform: scale(1.1);
+    background-color: rgb(152, 139, 146);
+}
+
+#timer{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 5rem;
+    margin: 2rem 0 0rem 0;
+}
+#time-type{
+    font-family: 'Signika Negative', sans-serif;
+    opacity: 0.5;
+    font-size: 1.5rem;
+    margin: 0rem 0 2rem 0;
+}
+.btn-darkMode-label{
+   
+    margin: 0 0 0 1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 25px;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-darkMode-label:active{
+    transform: scale(1.1);
+}
+header p {
+    font-family: 'Signika Negative', sans-serif;
+   margin-left: 0.2rem;
+}
+header div:last-child{
+    width: 100%;
+    margin-right: 5rem;
+    top: -2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div:first-child{
+    top: -2vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+header h1{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 810px) {
+    main {
+        width: 70vw;
+    }
+  }
+@media screen and (max-width: 600px) {
+    main {
+        width: 70vw;
+    }
+    header p{
+        display: none;
+    }
+    header h1{
+      
+        font-size: 3.5rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    main {
+        margin-top: 30%;
+        width: 70vw;
+    }
+    header p{
+        display: none;
+    }
+    header h1{
+        margin-top: 10rem;
+        margin-left: 1rem;
+        font-size: 3.5rem;
+    }
+    .btn-darkMode-label{
+        position: fixed;
+    }
+}@media screen and (max-width: 350px) {
+    main {
+        margin-top: 50%;
+        width: 80vw;
+    }
+    header p{
+        display: none;
+    }
+    header h1{
+        margin-top: 10rem;
+        margin-left: 0.5rem;
+        font-size: 3rem;
+    }
+    .btn-darkMode-label{
+        position: fixed;
+    }
+}

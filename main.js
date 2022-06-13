@@ -27,11 +27,7 @@ const audio = new Audio("audio.mp3");
     }
 function timedCount(){
     
-    if (!time_free) {
-        $timeType.innerHTML = "Focus time"
-    }else{
-        $timeType.innerHTML = "Free time"
-    }
+   
 
     conterSeg --
     if (conterSeg <= 0) {
@@ -39,14 +35,14 @@ function timedCount(){
         conterSeg = 60
     }
     
-    if(conterMin <= -1 && !time_free){
+    if(conterMin <= -1 && time_free){
        time_free = 1
        conterMin = 4
        
        audio.play()
        console.log(time_free)
     }
-    if(conterMin <= -1 && time_free){
+    if(conterMin <= -1 && !time_free){
         time_free = 0
         conterMin = 24
         
@@ -64,7 +60,11 @@ function timedCount(){
         $timer.innerHTML =  conterMin+":"+conterSeg
     }
     
-    
+    if (!time_free) {
+        $timeType.innerHTML = "Focus time"
+    }else{
+        $timeType.innerHTML = "Free time"
+    }
     window.sessionStorage.setItem('min', conterMin)
     window.sessionStorage.setItem('seg', conterSeg)
     timeout = setTimeout(timedCount,1000)
